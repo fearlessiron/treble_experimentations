@@ -350,6 +350,8 @@ function build_variant() {
 }
 
 function jack_env() {
+    export USE_CCACHE=1
+    export RELEASE_TYPE=FLO
     RAM=$(free | awk '/^Mem:/{ printf("%0.f", $2/(1024^2))}') #calculating how much RAM (wow, such ram)
     if [[ "$RAM" -lt 16 ]];then #if we're poor guys with less than 16gb
 	export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx"$((RAM -1))"G"

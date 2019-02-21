@@ -153,9 +153,9 @@ function get_rom_type() {
                 jack_enabled="true"
                 ;;
             lineage160)
-                mainrepo="https://github.com/LineageOS/android.git"
-                mainbranch="lineage-16.0"
-                localManifestBranch="android-9.0"
+                mainrepo="https://github.com/fearlessiron/android.git"
+                mainbranch="lineage-16.0-treble"
+                localManifestBranch="android-9.0-nogapps"
                 treble_generate="lineage"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 jack_enabled="false"
@@ -386,7 +386,7 @@ function clone_or_checkout() {
             git checkout origin/"$localManifestBranch"
         )
     else
-        git clone https://github.com/phhusson/"$repo" "$dir" -b "$localManifestBranch"
+        git clone https://github.com/fearlessiron/"$repo" "$dir" -b "$localManifestBranch"
     fi
 }
 

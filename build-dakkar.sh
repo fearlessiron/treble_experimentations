@@ -124,7 +124,7 @@ function get_rom_type() {
             lineage160)
                 mainrepo="https://github.com/fearlessiron/android.git"
                 mainbranch="lineage-16.0-treble"
-                localManifestBranch="android-9.0-nogapps"
+                localManifestBranch="android-9.0"
                 treble_generate="lineage"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 ;;

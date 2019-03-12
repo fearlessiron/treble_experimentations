@@ -394,6 +394,10 @@ function init_local_manifest() {
     clone_or_checkout .repo/local_manifests treble_manifest
 }
 
+function init_foss() {
+    (cd vendor/foss; git clean -fdx; bash update.sh)
+}
+
 function init_patches() {
     if [[ -n "$treble_generate" ]]; then
         clone_or_checkout patches treble_patches
@@ -484,6 +488,7 @@ if [[ $choice == *"y"* ]];then
     init_main_repo
     init_local_manifest
     init_patches
+    init_foss
     sync_repo
 fi
 

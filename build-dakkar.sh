@@ -62,6 +62,7 @@ Variants are dash-joined combinations of (in order):
   * "gapps" to include opengapps
   * "go" to include gapps go
   * "floss" to include floss
+  * "microg" to use microG as a Google Play Services replacement
 * SU selection ("su" or "nosu")
 * Build variant selection (optional)
   * "eng" for eng build
@@ -123,8 +124,8 @@ function get_rom_type() {
                 ;;
             lineage160)
                 mainrepo="https://github.com/fearlessiron/android.git"
-                mainbranch="lineage-16.0-treble"
-                localManifestBranch="android-9.0"
+                mainbranch="lineage-16.0-microg"
+                localManifestBranch="android-9.0-microg"
                 treble_generate="lineage"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
@@ -224,6 +225,7 @@ gapps_selection_map[vanilla]=v
 gapps_selection_map[gapps]=g
 gapps_selection_map[go]=o
 gapps_selection_map[floss]=f
+gapps_selection_map[microg]=u
 
 declare -A su_selection_map
 su_selection_map[su]=S

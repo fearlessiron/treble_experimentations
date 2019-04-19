@@ -492,8 +492,8 @@ if [[ $build_dakkar_choice == *"y"* ]];then
     init_main_repo
     init_local_manifest
     init_patches
-    init_foss
     sync_repo
+    init_foss
 fi
 
 patch_things

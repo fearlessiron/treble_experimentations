@@ -402,6 +402,10 @@ function init_foss() {
     (cd vendor/foss; git clean -fdx; bash update.sh)
 }
 
+function init_flo() {
+    (cd vendor/flo; git clean -fdx; bash update.sh)
+}
+
 function init_patches() {
     if [[ -n "$treble_generate" ]]; then
         clone_or_checkout patches treble_patches
@@ -493,7 +497,8 @@ if [[ $build_dakkar_choice == *"y"* ]];then
     init_local_manifest
     init_patches
     sync_repo
-    init_foss
+#    init_foss
+    init_flo
 fi
 
 patch_things

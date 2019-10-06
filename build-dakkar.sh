@@ -50,6 +50,7 @@ ROM types:
   komodo-pie
   lineage151
   lineage160
+  lineage170
   mokee-oreo
   pixel81
   pixel90
@@ -159,6 +160,13 @@ function get_rom_type() {
                 treble_generate="lineage"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 jack_enabled="false"
+                ;;
+            lineage170)
+                mainrepo="https://github.com/fearlessiron/android.git"
+                mainbranch="lineage-17.0-treble"
+                localManifestBranch="android-10.0"
+                treble_generate="lineage"
+                extra_make_options="WITHOUT_CHECK_API=true"
                 ;;
             rr-oreo)
                 mainrepo="https://github.com/ResurrectionRemix/platform_manifest.git"
